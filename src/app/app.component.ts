@@ -67,4 +67,9 @@ export class AppComponent {
   deleteItem(index: number) {
     this.items.splice(index, 1);
   }
+
+  // tslint:disable-next-line: typedef
+  clickProduct(id: number) {
+    console.log(id);
+  }
 }
