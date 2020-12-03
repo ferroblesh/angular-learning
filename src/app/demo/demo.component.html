@@ -24,11 +24,3 @@
     <button (click)="deleteItem(i)">delete</button>
   </li>
 </ul>
-
-<div class="product-grid" >
-  <app-product
-    *ngFor="let product of products"
-    (productClick)="clickProduct($event)"
-    [product]="product">
-  </app-product>
-</div>
