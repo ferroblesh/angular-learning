@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
+import { AdminGuard } from './admin.guard';
 import { ContactComponent } from './contact/contact.component';
 import { DemoComponent } from './demo/demo.component';
 import { LayoutComponent } from './layout/layout.component';
@@ -23,10 +24,12 @@ const routes: Routes = [
       },
       {
         path: 'products',
+        canActivate: [AdminGuard],
         component: ProductsComponent
       },
       {
         path: 'contact',
+        canActivate: [AdminGuard],
         component: ContactComponent
       },
       {
