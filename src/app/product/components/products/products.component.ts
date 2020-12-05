@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Product } from '../product.model';
+
+import { Product } from './../../../core/models/product.model';
 
 @Component({
   selector: 'app-products',
@@ -55,11 +56,12 @@ export class ProductsComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
-  // tslint:disable-next-line: typedef
   clickProduct(id: number) {
+    console.log('product');
     console.log(id);
   }
+
 }

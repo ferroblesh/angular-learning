@@ -7,23 +7,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DemoComponent implements OnInit {
 
-  constructor() { }
-
   title = 'platzi-store';
-  power = 10;
+
   items = ['nicolas', 'julian', 'perez'];
 
-  ngOnInit(): void {
+  objeto = {};
+
+  power = 10;
+
+  ngOnInit() {
+    // code
   }
 
-   // tslint:disable-next-line: typedef
   addItem() {
     this.items.push('nuevo item');
   }
 
-  // tslint:disable-next-line: typedef
   deleteItem(index: number) {
     this.items.splice(index, 1);
   }
+
+
 
 }
