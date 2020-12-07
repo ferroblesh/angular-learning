@@ -11,5 +11,7 @@
       <p>{{ product.description | slice:0:10 }}</p>
     </mat-card-content>
     <button (click)="createProduct()" mat-raised-button color="primary">Agregar al carrito</button>
+    <button (click)="updateProduct()" mat-raised-button color="primary">Update</button>
+    <button (click)="deleteProduct()" mat-raised-button color="primary">Delete</button>
   </mat-card>
 </div>

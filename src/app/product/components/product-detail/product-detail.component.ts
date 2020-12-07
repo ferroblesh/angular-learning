@@ -43,6 +43,20 @@ export class ProductDetailComponent implements OnInit {
     };
     this.productsService.createProduct(item)
     .subscribe(newProduct => console.log(newProduct));
+  }
 
+  // tslint:disable-next-line: typedef
+  updateProduct() {
+    const item: Partial<Product> = {
+      description: 'updated',
+      price: 444
+    };
+    this.productsService.updateProduct('2', item)
+    .subscribe(newProduct => console.log(newProduct));
+  }
+
+  deleteProduct(): void {
+    this.productsService.deleteProduct('222')
+      .subscribe(response => console.log(response));
   }
 }

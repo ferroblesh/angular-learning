@@ -72,4 +72,13 @@ export class ProductsService {
   createProduct(product: Product) {
     return this.http.post<Product>(`${environment.url_api}`, product);
   }
+
+  // tslint:disable-next-line: typedef
+  updateProduct(id: string, changes: Partial<Product>) {
+    return this.http.put<Product>(`${environment.url_api}/${id}`, changes);
+  }
+
+  deleteProduct(id: string) {
+    return this.http.delete(`${environment.url_api}/${id}`);
+  }
 }
