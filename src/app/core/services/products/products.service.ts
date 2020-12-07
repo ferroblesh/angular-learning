@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 import { Product } from './../../models/product.model';
@@ -52,13 +53,17 @@ export class ProductsService {
     },
   ];
 
-  constructor() { }
+  constructor(
+    private http: HttpClient
+  ) { }
 
+  // tslint:disable-next-line: typedef
   getAllProducts() {
-    return this.products;
+    return this.http.get<Product[]>(`https://platzi-store.herokuapp.com/products`);
   }
 
+  // tslint:disable-next-line: typedef
   getProduct(id: string) {
-    return this.products.find(item => id === item.id);
+    return this.http.get(`https://platzi-store.herokuapp.com/products/${id}`);
   }
 }
