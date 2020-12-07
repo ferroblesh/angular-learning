@@ -27,6 +27,7 @@ export class ProductComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     console.log('3. ngOnInit');
+    console.log('product' + this.product.id + this.product);
   }
 
   ngOnDestroy() {

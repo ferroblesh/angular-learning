@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 import { Product } from './../../models/product.model';
 
@@ -59,11 +60,16 @@ export class ProductsService {
 
   // tslint:disable-next-line: typedef
   getAllProducts() {
-    return this.http.get<Product[]>(`https://platzi-store.herokuapp.com/products`);
+    return this.http.get<Product[]>(environment.url_api);
   }
 
   // tslint:disable-next-line: typedef
   getProduct(id: string) {
-    return this.http.get(`https://platzi-store.herokuapp.com/products/${id}`);
+    return this.http.get<Product>(`${environment.url_api}/${id}`);
+  }
+
+  // tslint:disable-next-line: typedef
+  createProduct(product: Product) {
+    return this.http.post<Product>(`${environment.url_api}`, product);
   }
 }
