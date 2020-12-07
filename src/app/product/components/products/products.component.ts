@@ -31,8 +31,8 @@ export class ProductsComponent implements OnInit {
   fetchProducts() {
     this.productsService.getAllProducts()
     .subscribe(products => {
-      console.log(products);
-    })
+      this.products = products;
+    });
   }
 
 }
