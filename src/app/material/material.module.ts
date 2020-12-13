@@ -6,6 +6,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field'
 import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatCardModule } from '@angular/material/card';
@@ -27,7 +28,8 @@ import { MatListModule } from '@angular/material/list';
     MatRadioModule,
     MatTableModule,
     MatSidenavModule,
-    MatListModule
+    MatListModule,
+    MatFormFieldModule
   ],
   exports: [
     MatButtonModule,
@@ -40,7 +42,8 @@ import { MatListModule } from '@angular/material/list';
     MatRadioModule,
     MatTableModule,
     MatSidenavModule,
-    MatListModule
+    MatListModule,
+    MatFormFieldModule
   ]
 })
 export class MaterialModule { }

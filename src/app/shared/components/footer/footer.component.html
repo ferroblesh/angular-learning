@@ -1,1 +1,6 @@
-<p>footer works!</p>
+<div>
+  <mat-form-field>
+    <input matInput placeholder="Email" type="email" [formControl]="emailField" type="text">
+  </mat-form-field>
+    <button mat-raised-button [disabled]="!emailField.valid" (click)="sendEmail()">Enviar</button>
+</div>
